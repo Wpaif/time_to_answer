@@ -1,5 +1,10 @@
 {
   "name": "time_to_answer",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.6.3",
+    "jquery": "3.1.0",
+    "metismenu": "1.1.3"
+  }
 }
