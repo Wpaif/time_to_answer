@@ -18,7 +18,8 @@ Rails.application.config.assets.precompile += %w[admins_backoffice.js admins_bac
 
 # lib/assets
 Rails.application.config.assets.precompile += %w[sb-admin-2.js sb-admin-2.css
-                                                 gentelella.js gentelella.css]
+                                                 gentelella.js gentelella.css
+                                                 img.jpg]
 
 # vendot/assets
 Rails.application.config.assets.precompile += %w[jquery-2.2.3/dist/jquery.js]
