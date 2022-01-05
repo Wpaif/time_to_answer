@@ -12,5 +12,13 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 
+# app/assets
+Rails.application.config.assets.precompile += %w[admins_backoffice.js admins_backoffice.css
+                                                 users_backoffice.js users_backoffice.css]
+
 # lib/assets
-Rails.application.config.assets.precompile += %w[admins_backoffice.js admins_backoffice.css]
+Rails.application.config.assets.precompile += %w[sb-admin-2.js sb-admin-2.css
+                                                 gentelella.js gentelella.css]
+
+# vendot/assets
+Rails.application.config.assets.precompile += %w[jquery-2.2.3/dist/jquery.js]
