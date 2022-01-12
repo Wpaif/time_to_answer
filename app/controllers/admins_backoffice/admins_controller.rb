@@ -1,5 +1,5 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
-  before_action :set_admin, only: %i[edit update]
+  before_action :set_admin, only: %i[edit update destroy]
   before_action :check_password, only: %i[update]
 
   def index
@@ -17,6 +17,14 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
       redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Created'
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @admin.destroy
+      redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Deleted'
+    else
+      render :index
     end
   end
 
