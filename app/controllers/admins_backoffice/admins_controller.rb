@@ -6,6 +6,20 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     @admins = Admin.all
   end
 
+  def new
+    @admin = Admin.new
+  end
+
+  def create
+    @admin = Admin.new(admin_params)
+
+    if @admin.save
+      redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Created'
+    else
+      render :new
+    end
+  end
+
   def edit; end
 
   def update
