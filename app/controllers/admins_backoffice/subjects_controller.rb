@@ -2,7 +2,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   before_action :set_subject, only: %i[edit update destroy]
 
   def index
-    @subjects = Subject.all
+    @subjects = Subject.all.page(params[:page])
   end
 
   def new
