@@ -1,4 +1,6 @@
 class AdminsBackoffice::SubjectsController < AdminsBackofficeController
+  before_action :set_subject, only: %i[edit update destroy]
+
   def index
     @subjects = Subject.all
   end
@@ -17,13 +19,9 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
     end
   end
 
-  def edit
-    @subject = Subject.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @subject = Subject.find(params[:id])
-
     if @subject.update(subject_params)
       redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Updated'
     else
@@ -32,8 +30,6 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   end
 
   def destroy
-    @subject = Subject.find(params[:id])
-
     if @subject.destroy
       redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Deleted'
     else
@@ -45,5 +41,9 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def subject_params
     params.require(:subject).permit(:description)
+  end
+
+  def set_subject
+    @subject = Subject.find(params[:id])
   end
 end
