@@ -31,6 +31,16 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
     end
   end
 
+  def destroy
+    @subject = Subject.find(params[:id])
+
+    if @subject.destroy
+      redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Deleted'
+    else
+      render :index
+    end
+  end
+
   private
 
   def subject_params

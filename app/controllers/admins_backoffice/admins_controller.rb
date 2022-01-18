@@ -20,14 +20,6 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     end
   end
 
-  def destroy
-    if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Deleted'
-    else
-      render :index
-    end
-  end
-
   def edit; end
 
   def update
@@ -35,6 +27,14 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
       redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Updated'
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @admin.destroy
+      redirect_to admins_backoffice_admins_path, notice: 'Admin Successfully Deleted'
+    else
+      render :index
     end
   end
 
