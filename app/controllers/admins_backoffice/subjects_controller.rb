@@ -17,6 +17,20 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
     end
   end
 
+  def edit
+    @subject = Subject.find(params[:id])
+  end
+
+  def update
+    @subject = Subject.find(params[:id])
+
+    if @subject.update(subject_params)
+      redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Updated'
+    else
+      render :edit
+    end
+  end
+
   private
 
   def subject_params
