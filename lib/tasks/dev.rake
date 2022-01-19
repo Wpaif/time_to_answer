@@ -13,6 +13,7 @@ namespace :dev do
       show_spinner('Registering extra admins...') { `rails dev:add_extra_admins` }
       show_spinner('Registering default user...') { `rails dev:add_default_user` }
       show_spinner('Registering default subjects...') { `rails dev:add_default_subjects` }
+      show_spinner('Registering questions and answers...') { `rails dev:add_questions_and_answers` }
     else
       puts 'You not be in development environmet!'
     end
@@ -54,6 +55,18 @@ namespace :dev do
 
     File.open(file_path, 'r').each do |line|
       Subject.create!(description: line.strip)
+    end
+  end
+
+  desc 'Adding example questions and your answers'
+  task add_questions_and_answers: :environment do
+    Subject.all.each do |subject|
+      rand(5..10).times do
+        Question.create!(
+          description: Faker::Lorem.paragraph << Faker::Lorem.question,
+          subject: subject
+        )
+      end
     end
   end
 
