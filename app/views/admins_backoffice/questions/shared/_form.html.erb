@@ -28,8 +28,8 @@
                 <%= form.text_area :description, class: 'form-control', placeholder: 'Enter with the question', rows: 5 %>
               </div>
               <div class="form-group">
-                <%= form.label :subject %>
-                <%= form.collection_select(:subject_id, subjects, :id, :description) %>
+                <%= form.label :subject_id %>
+                <%= form.collection_select(:subject_id, subjects, :id, :description, {}, {class: 'form-control'}) %>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             <% end %>

@@ -1,11 +1,13 @@
 class AdminsBackoffice::QuestionsController < AdminsBackofficeController
+  before_action :set_question, only: %i[edit update destroy]
+  before_action :set_all_subjects, only: %i[edit new]
+
   def index
     @questions = Question.all
   end
 
   def new
     @question = Question.new
-    @subjects = Subject.all
   end
 
   def create
@@ -18,14 +20,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
     end
   end
 
-  def edit
-    @question = Question.find(params[:id])
-    @subjects = Subject.all
-  end
+  def edit; end
 
   def update
-    @question = Question.find(params[:id])
-
     if @question.update(question_params)
       redirect_to admins_backoffice_questions_path, notice: 'Question Successfully Created'
     else
@@ -33,9 +30,25 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
     end
   end
 
+  def destroy
+    if @question.destroy
+      redirect_to admins_backoffice_questions_path, notice: 'Question Successfully Deleted'
+    else
+      render :index
+    end
+  end
+
   private
 
   def question_params
     params.require(:question).permit(:description, :subject_id)
+  end
+
+  def set_question
+    @question = Question.find(params[:id])
+  end
+
+  def set_all_subjects
+    @subjects = Subject.all
   end
 end
