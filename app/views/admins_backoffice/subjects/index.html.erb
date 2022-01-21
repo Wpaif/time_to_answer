@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="page-header">Listing Subjects</h1>
+    <h1 class="page-header"> <%= t('messages.listing', model: @subjects.model_name.human(count: 2)) %> </h1>
   </div>
 </div>
 <div class="table-responsive">
@@ -25,9 +25,10 @@
             <%= link_to edit_admins_backoffice_subject_path(subject), class:'btn btn-primary btn-circle' do %>
               <i class="fa fa-edit"></i>
             <% end %>
-            <%= link_to admins_backoffice_subject_path(subject), method: :delete, 
-                                                             class:"btn btn-danger btn-circle", 
-                                                             data: { confirm: "Do you really want to delete this subject?" }  do %>
+            <%= link_to admins_backoffice_subject_path(subject),
+                        method: :delete, 
+                        class:"btn btn-danger btn-circle", 
+                        data: { confirm: t('messages.confirm_with', item: subject.description) }  do %>
               <i class="fa fa-minus"></i>
             <% end %>
           </td>

@@ -1,0 +1,8 @@
+en:
+  messages:
+    listing: Listing %{model}
+    edit: Edit
+    new: New %{model}
+    confirm_with: Do you really want to delete "%{item}"?
+    new_item: Registering %{model}
+    edit_item: Editing %{model}
