@@ -15,13 +15,13 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'cocoon'
 gem 'devise'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'rails-i18n', '~> 5.1'
 gem 'tty-spinner'
-gem 'cocoon'
 
 group :development, :test do
   gem 'awesome_print'
