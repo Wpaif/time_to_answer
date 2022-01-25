@@ -1,0 +1,10 @@
+<div class="nested-fields">
+  <div class="form-group">
+    <%= f.label :description %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :description %>
+    <%= f.check_box :correct %> Correct?
+    <%= link_to_remove_association('Remove', f)  %>
+  </div>
+</div>
