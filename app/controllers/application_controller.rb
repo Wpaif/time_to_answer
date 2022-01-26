@@ -4,10 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def layout_by_resource
-    if devise_controller? && resource_class == Admin
-      'admin_devise'
-    else
-      'application'
-    end
+    scope_name = resource_class.to_s.downcase.concat('_devise')
+    devise_controller? ? scope_name : 'application'
   end
 end
