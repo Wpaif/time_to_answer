@@ -62,8 +62,29 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <%= yield %>
-      </div>
+        <h1>Site::Welcome#index</h1>
+        <% if user_signed_in? %>
+          <div>
+            <p>Session:  <%= link_to current_user.email, users_backoffice_welcome_index_path %> </p>
+          </div>
+        <% else %>
+          <div>
+            <%= link_to 'Login User', new_user_session_path %>
+          </div>
+        <% end %>
+
+        <% if admin_signed_in? %>
+          <div>
+            <p>Session:  <%= link_to current_admin.email, admins_backoffice_welcome_index_path %> </p>
+          </div>
+        <% else %>
+          <div>
+            <%= link_to 'Login Admin', new_admin_session_path %>
+          </div>
+        <% end %>
+      </div> <!-- /jumbotron -->
+      
+      <%= yield %>
     
     </div> <!-- /container -->
 

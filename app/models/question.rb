@@ -7,5 +7,5 @@ class Question < ApplicationRecord
   scope :desc_order, -> { order(:description) }
 
   # Kaminari
-  paginates_per 15
+  paginates_per 5
 end
