@@ -4,7 +4,7 @@ class Question < ApplicationRecord
 
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
-  scope :desc_order, -> { order(:description) }
+  scope :desc_order, -> { order(:created_at) }
 
   # Kaminari
   paginates_per 5
