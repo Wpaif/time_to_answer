@@ -4,17 +4,22 @@ class Question < ApplicationRecord
 
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
-  def self.search_question(term, page_number)
+  scope :search_question, lambda { |term, page_number|
     Question.includes(:answers)
             .where('lower(description) LIKE ?', "%#{term.downcase}%")
             .desc_order
-            .page(page_number)
-  end
+            .paginate(page_number)
+  }
 
-  def self.last_questions(page_number)
-    Question.includes(:answers).desc_order.page(page_number)
-  end
+  scope :last_questions, lambda { |page_number|
+    Question.includes(:answers)
+            .desc_order
+            .paginate(page_number)
+  }
+
   scope :desc_order, -> { order(created_at: :desc) }
+
+  scope :paginate, ->(page_number) { page(page_number) }
 
   # Kaminari
   paginates_per 5
