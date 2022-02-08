@@ -69,15 +69,6 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <% if params[:term] %>
-          <h3> <%= "Latest questions for term \"#{params[:term]}\"" %> </h3>
-        <% else %>
-          <h3>Latest questions registered...</h3>
-        <% end %>
-      </div> <!-- /jumbotron -->
-      
       <%= yield %>
     
     </div> <!-- /container -->

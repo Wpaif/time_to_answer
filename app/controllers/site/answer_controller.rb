@@ -1,5 +1,5 @@
 class Site::AnswerController < SiteController
   def question
-    @answer = Answer.find(params[:answer_id])
+    puts ">>>>>>>>>>>>>>>>>>>> #{params[:answer]}"
   end
 end
