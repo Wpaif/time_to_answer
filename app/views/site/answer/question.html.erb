@@ -1,5 +1,7 @@
-<% if @answer.correct %>
-  <h1 style="color: #00ff00">Congratulations you got it right!</h1>
-<% else %>
-  <h1 style="color: #ff0000">Unfortunately you were wrong!</h1>
+<% if params[:answer_id] %>
+  <% if @answer.correct %>
+    <h1 style="color: #00ff00">Congratulations you got it right!</h1>
+  <% else %>
+    <h1 style="color: #ff0000">Unfortunately you were wrong!</h1>
+  <% end %>
 <% end %>
