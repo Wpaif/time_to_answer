@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :site do
     get 'welcome/index'
     get 'search', to: 'search#question'
+    get 'subject/:subject_id/:subject', to: 'search#subject', as: 'search_subject'
     post 'answer', to: 'answer#question'
   end
 

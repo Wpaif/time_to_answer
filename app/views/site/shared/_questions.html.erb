@@ -1,18 +1,23 @@
 <!-- Main component for a primary marketing message or call to action -->
 <div class="jumbotron">
-  <% if params[:term] %>
-    <h3> <%= "Latest questions for term \"#{params[:term]}\"" %> </h3>
-  <% else %>
-    <h3>Latest questions registered...</h3>
-  <% end %>
+  <h3> <%= msg_jumbotron %> </h3>
 </div> <!-- /jumbotron -->
 
 <% @questions.each do |question| %>
   <%= form_with url: site_answer_path do |form|%>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"> <%= question.description %> </h3>
+        <h3 class="panel-title">
+          <span class="label label-info" style="margin-right: 10px; font-size: 11pt"> 
+            <%= link_to question.subject.description, 
+                        site_search_subject_path(question.subject_id, question.subject.description), 
+                        style: 'color: #FFF; text-size: 11pt' %> 
+          </span>
+
+          <%= question.description %> 
+        </h3>
       </div>
+
       <div class="panel-body">
         <ul>
           <% question.answers.each do |answer| %>
@@ -30,10 +35,10 @@
             <%= form.submit 'Send', class:'btn btn-default', id: "submit_#{question.id}"%>
           </li>
         </ul>
-
       </div>
+
     </div>
-  <% end %>decoration
+  <% end %>
 <% end %>
 
 <div class="text-center">
