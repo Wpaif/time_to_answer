@@ -5,21 +5,21 @@ class Question < ApplicationRecord
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
   scope :search_subject, lambda { |subject_id, page_number|
-    Question.includes(:answers)
+    Question.includes(:answers, :subject)
             .where(subject_id: subject_id)
             .desc_order
             .paginate(page_number)
   }
 
   scope :search_question, lambda { |term, page_number|
-    Question.includes(:answers)
+    Question.includes(:answers, :subject)
             .where('lower(description) LIKE ?', "%#{term.downcase}%")
             .desc_order
             .paginate(page_number)
   }
 
   scope :last_questions, lambda { |page_number|
-    Question.includes(:answers)
+    Question.includes(:answers, :subject)
             .desc_order
             .paginate(page_number)
   }
