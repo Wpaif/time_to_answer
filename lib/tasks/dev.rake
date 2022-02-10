@@ -73,6 +73,15 @@ namespace :dev do
     end
   end
 
+  desc 'Resets the subject counters'
+  task reset_subject_counter: :environment do
+    show_spinner('Resets the subject counters...') do
+      Subject.all.each do |subject|
+        Subject.reset_counters(subject.id, :questions)
+      end
+    end
+  end
+
   private
 
   def answers_array(subject = Subject.all.sample)
