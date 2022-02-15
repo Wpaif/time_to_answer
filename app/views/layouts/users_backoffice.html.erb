@@ -18,7 +18,9 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <%= link_to root_path, class: 'site_title' do %>
+                <i class="fa fa-pencil"></i> <span>Time to Answer</span>
+              <% end %>
             </div>
             <div class="clearfix"></div>
             <!-- menu profile quick info -->
@@ -36,8 +38,18 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-user"></i>Profile Data</a></li>
+                <ul class="nav side-menu">   
+                  <li>
+                    <%= link_to users_backoffice_welcome_index_path do %>
+                      <i class="fa fa-home"></i>Profile
+                    <% end %>
+                  </li>      
+
+                  <li>
+                    <%= link_to users_backoffice_profile_path do %>
+                      <i class="fa fa-user"></i>Edit Data
+                    <% end %>
+                  </li>
                 </ul>
               </div>
 
@@ -164,10 +176,7 @@
           <div class="right_col" role="main">
             <div class="">
               <div class="page-title">
-                <div class="title_left">
-                  <h3>Layout Users_Backoffice</h3>
-                  <%= yield %>
-                </div>
+                <%= yield %>
               </div>
             </div>
           </div>
