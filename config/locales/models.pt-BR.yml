@@ -1,4 +1,3 @@
-
 'pt-BR':
   activerecord:
     models:
@@ -16,26 +15,28 @@
         other: Perguntas
     attributes:
       admin:
-        id: Código
+        id: ID
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
         created_at: Criado em
         updated_at: Atualizado em
       user:
-        id: Código
+        id: ID
+        first_name: Nome
+        last_name: Sobrenome
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
         created_at: Criado em
         updated_at: Atualizado em
       subject:
-        id: Código
+        id: ID
         description: Descrição
         created_at: Criado em
         updated_at: Atualizado em
       question:
-        id: Código
+        id: ID
         description: Descrição
         subject: Assunto
         subject_id: Assunto

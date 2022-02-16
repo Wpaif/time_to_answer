@@ -1,5 +1,7 @@
 en:
   placeholder:
+    admin_first_name: Type your name
+    admin_last_name: Type your surname
     admin_email: Administrator email
     admin_password: Type your password
     admin_password_confirmation: Confirm your password
