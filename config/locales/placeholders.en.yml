@@ -1,0 +1,7 @@
+en:
+  placeholder:
+    admin_email: Administrator email
+    admin_password: Type your password
+    admin_password_confirmation: Confirm your password
+    question_description: Question description
+    subject_description: Subject/Question description
