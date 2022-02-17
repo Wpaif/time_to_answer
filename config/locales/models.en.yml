@@ -26,13 +26,17 @@ en:
         first_name: First Name
         last_name: Last Name
         email: Email
-        address: Address
-        gender: Gender
-        birthdate: Birthdate
         password: Password
         password_confirmation: Password Confirmation
         created_at: Created at
         updated_at: Updated at
+      user_profile:
+        id: ID
+        address: Address
+        gender: Gender
+        birthdate: Birthdate
+        created_at: Created at
+        updated_at: Update at
       subject:
         id: ID
         description: Description

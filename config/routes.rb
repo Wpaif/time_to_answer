@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   end
   devise_for :admins, skip: %i[registration]
 
+  get '/admin', to: 'admins_backoffice/welcome#index'
   root to: 'site/welcome#index'
 end
