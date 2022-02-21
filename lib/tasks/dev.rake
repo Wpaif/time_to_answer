@@ -6,9 +6,9 @@ namespace :dev do
   desc 'Configura o ambiente de desenvolvimento'
   task setup: :environment do
     if Rails.env.development?
-      show_spinner('Droping BD...') { `rails db:drop` }
-      show_spinner('Creating BD...') { `rails db:create` }
-      show_spinner('Migrating BD...') { `rails db:migrate` }
+      show_spinner('Droping DD...') { `rails db:drop` }
+      show_spinner('Creating DB...') { `rails db:create` }
+      show_spinner('Migrating DB...') { `rails db:migrate` }
       show_spinner('Registering default admin...') { `rails dev:add_default_admin` }
       show_spinner('Registering extra admins...') { `rails dev:add_extra_admins` }
       show_spinner('Registering default user...') { `rails dev:add_default_user` }
