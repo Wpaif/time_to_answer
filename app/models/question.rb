@@ -4,6 +4,10 @@ class Question < ApplicationRecord
 
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
+  # Callbacks
+  after_create :set_statistic
+
+  # Scopes
   scope :search_subject, lambda { |subject_id, page_number|
     Question.includes(:answers, :subject)
             .where(subject_id: subject_id)
@@ -30,4 +34,10 @@ class Question < ApplicationRecord
 
   # Kaminari
   paginates_per 5
+
+  private
+
+  def set_statistic
+    AdminStatistic.assing_event(AdminStatistic::EVENTS[:total_questions])
+  end
 end
