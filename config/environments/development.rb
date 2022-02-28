@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -38,6 +39,17 @@ Rails.application.configure do
   # Devise configuration
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Mailtrap Configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: 'cbb68107d0f7c9',
+    password: '335bf55f953b6b',
+    address: 'smtp.mailtrap.io',
+    domain: 'smtp.mailtrap.io',
+    port: '2525',
+    authentication: :cram_md5
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -62,3 +74,4 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+# rubocop:enable Metrics/BlockLength
