@@ -1,9 +1,0 @@
-'pt-BR':
-  placeholder:
-    admin_first_name: Digite seu nome
-    admin_last_name: Digite seu sobrenome
-    admin_email: Email do administrador
-    admin_password: Digite uma senha
-    admin_password_confirmation: Confirme a senha
-    question_description: Descrição da pergunta
-    subject_description: Descrição do assunto/área
