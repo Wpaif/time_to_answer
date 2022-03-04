@@ -33,7 +33,7 @@ class Question < ApplicationRecord
   scope :paginate, ->(page_number) { page(page_number) }
 
   # Kaminari
-  paginates_per 5
+  paginates_per 15
 
   private
 
