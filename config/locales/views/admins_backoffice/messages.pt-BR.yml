@@ -6,3 +6,8 @@
     confirm_with: Deseja realmente excluir "%{item}"?
     new_item: Registrando %{model}
     edit_item: Editando um%{gender} %{model}
+    welcome: Bem-Vindo
+    
+    index:
+      total_users: Total de usuários do sistema
+      total_questions: Total de perguntas no sistema

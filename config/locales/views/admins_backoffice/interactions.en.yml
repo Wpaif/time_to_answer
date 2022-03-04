@@ -1,0 +1,10 @@
+en:
+  interaction: 
+    button:
+      save: Save
+      submit: Submit
+      add_subject: Add subject
+    link:
+      remove: Remove
+    message:
+      its_correct: Correct?

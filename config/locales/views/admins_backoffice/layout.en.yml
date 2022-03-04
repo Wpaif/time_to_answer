@@ -1,0 +1,12 @@
+en: 
+  layout:
+    backoffice: Administrative Backoffice
+
+    menu:
+      admins: Administrators
+      questions: Questions
+      subjects: Subjects
+      dashboard: Dashboard
+
+    dropdown:
+      logout: Logout

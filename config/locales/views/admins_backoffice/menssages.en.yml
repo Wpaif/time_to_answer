@@ -6,3 +6,8 @@ en:
     confirm_with: Do you really want to delete "%{item}"?
     new_item: Registering %{model}
     edit_item: Editing %{model}
+    
+    index:
+      welcome: Welcome
+      total_user: Total system user
+      total_questions: Total questions in the system

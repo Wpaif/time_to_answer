@@ -1,0 +1,12 @@
+'pt-BR': 
+  layout:
+    backoffice: Backoffice Administrativo
+    
+    menu:
+      admins: Administradores
+      questions: Perguntas
+      subjects: Assuntos
+      dashboard: Painel de Controle
+
+    dropdown:
+      logout: Sair

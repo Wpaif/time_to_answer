@@ -1,0 +1,10 @@
+'pt-BR':
+  interaction: 
+    button:
+      save: Salvar
+      submit: Enviar
+      add_subject: Adicionar Assunto
+    link:
+      remove: Remover
+    message:
+      its_correct: Correto?
