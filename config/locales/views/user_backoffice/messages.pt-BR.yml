@@ -1,0 +1,13 @@
+'pt-BR':
+  messages:
+    profile: Perfil
+    subtitle: Edite seus dados
+    
+    index:
+      welcome: Bem-Vindo
+      total: Total
+      questions_answered: Total de perguntas respondidas
+      corrects:  Corretas
+      questions_answered_correctly: Quantidade de perguntas repondias corretamente
+      wrongs: Erradas
+      questions_answered_wrongs: Quantidade de pergutas repodidas de forma errada

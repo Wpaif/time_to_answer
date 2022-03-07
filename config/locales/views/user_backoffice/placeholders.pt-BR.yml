@@ -1,0 +1,9 @@
+'pt-BR':
+  placeholder:
+    user:
+      first_name: Digite seu nome
+      last_name: Digite seu sobrenome
+      email: Digite seu email
+      andress: Digite seu endereço
+      password: Digite sua senha
+      password_confirmation: Difite sua senha novamente

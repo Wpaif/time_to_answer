@@ -1,11 +1,11 @@
-<h1>Welcome</h1>
+<h1> <%= t('messages.profile') %> </h1>
 
 <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
   <div class="tile-stats">
     <div class="icon"><i class="fa fa-comments-o"></i></div>
     <div class="count"> <%= @user_statistic.total_questions %> </div>
-    <h3>Total</h3>
-    <p>Total number of questions answered</p>
+    <h3> <%= t('messages.index.total') %> </h3>
+    <p> <%= t('messages.index.questions_answered') %> </p>
   </div>
 </div>
 
@@ -14,8 +14,8 @@
   <div class="tile-stats">
     <div class="icon"><i class="fa fa-check-square-o"></i></div>
     <div class="count"> <%= @user_statistic.right_questions %> </div>
-    <h3>Corrects</h3>
-    <p>Total number of corrects questions</p>
+    <h3> <%= t('messages.index.corrects') %> </h3>
+    <p> <%= t('messages.index.questions_answered_correctly') %> </p>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
   <div class="tile-stats">
     <div class="icon"><i class="fa fa-close"></i></div>
     <div class="count"> <%= @user_statistic.wrong_questions %> </div>
-    <h3>Wrongs</h3>
-    <p>Total number of wrongs questions</p>
+    <h3> <%= t('messages.index.wrongs') %> </h3>
+    <p> <%= t('messages.index.questions_answered_wrongs') %> </p>
   </div>
 </div>

@@ -1,0 +1,16 @@
+en:
+  messages:
+    profile:  Profile
+    subtitle: Edit your data
+    
+    index:
+      welcome: Welcome
+      total: Total
+      questions_answered: Total number of questions answered
+      corrects:  Corrects
+      questions_answered_correctly: Total number of corrects questions
+      wrongs: Wrongs
+      questions_answered_wrongs: Total number of wrongs questions
+
+
+

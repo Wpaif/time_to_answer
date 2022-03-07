@@ -1,0 +1,10 @@
+en: 
+  layout:
+    welcome: Welcome
+
+    menu:
+      profile: Profile
+      edit: Edit Data
+
+    dropdown:
+      logout: Logout

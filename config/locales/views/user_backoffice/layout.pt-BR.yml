@@ -1,0 +1,10 @@
+'pt-BR': 
+  layout:
+    welcome: Bem-Vindo
+
+    menu:
+      profile: Perfil
+      edit: Editar dados
+      
+    dropdown:
+      logout: Sair

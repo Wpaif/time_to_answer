@@ -1,0 +1,9 @@
+en:
+  placeholder:
+    user:
+      first_name: Type your firts name
+      last_name: Type your last name
+      email: Type your email
+      andress: Type your andress
+      password: Type yout password
+      password_confirmation: Type your password againkw
