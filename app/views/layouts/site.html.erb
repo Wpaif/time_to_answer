@@ -35,16 +35,16 @@
             <%= form_with(url: site_search_path, local: true, method: :get, 
                           class: 'navbar-form navbar-left') do |form| %>
               <div class="form-group">
-                <%= form.text_field :term, class: 'form-control', placeholder: 'Search' %>
+                <%= form.text_field :term, class: 'form-control', placeholder: t('site.placeholder.search') %>
               </div>
-              <%= form.submit 'Search', class: 'btn btn-default' %>
+              <%= form.submit t('site.button.search'), class: 'btn btn-default' %>
             <% end %>
             
             <ul class="nav navbar-nav navbar-right">
               
               <% unless user_signed_in? %>
-                <li> <%= link_to 'Sign in', new_user_session_path %> </li>
-                <li> <%= link_to 'Sign up', new_user_registration_path %> </li>
+                <li> <%= link_to t('site.menu.sign_in'), new_user_session_path %> </li>
+                <li> <%= link_to t('site.menu.sign_up'), new_user_registration_path %> </li>
               <% else %>
                 <li><a href="../navbar-fixed-top/"></a></li>
                 <li class="dropdown">

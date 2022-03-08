@@ -1,0 +1,23 @@
+'pt-BR':
+  site:
+    message:
+      last_added: Latest questions registered...
+      seach_message: Latest questions for "%{term}"
+      filter_message: Questions in %{subject}
+      login_alert: Login to continue responding
+
+    placeholder:
+      search: Term 
+
+    button:
+      send: Send
+      search: Search
+
+    dropdown:
+      profile: Profile
+      logout: Logout
+    
+    menu:
+      sign_in: Sign in
+      sign_up: Sign up
+    

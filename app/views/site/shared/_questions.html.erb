@@ -32,7 +32,7 @@
           <% end %>
 
           <li style="list-style:none">
-            <%= form.submit 'Send', class:'btn btn-default', id: "submit_#{question.id}"%>
+            <%= form.submit t('site.button.send'), class:'btn btn-default', id: "submit_#{question.id}"%>
           </li>
         </ul>
       </div>
@@ -47,6 +47,6 @@
     <%= paginate @questions %>
   </div>
 <% else %>
-  <div class="alert alert-warning" role="alert">Login to continue replying</div>
+  <div class="alert alert-warning" role="alert"> <%= t('site.message.login_alert') %> </div>
 <% end %>
 

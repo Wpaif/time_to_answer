@@ -2,11 +2,11 @@ module Site::SearchHelper
   def msg_jumbotron
     case params[:action]
     when 'index'
-      'Latest questions registered...'
+      t('site.message.last_added')
     when 'question'
-      "Latest questions for term \"#{params[:term]}\""
+      t('site.message.seach_message', term: params[:term])
     when 'subject'
-      "Questions for the \"#{params[:subject]}\""
+      t('site.message.filter_message', subject: params[:subject])
     end
   end
 end

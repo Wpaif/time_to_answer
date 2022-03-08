@@ -1,0 +1,23 @@
+'pt-BR':
+  site:
+    message:
+      last_added: Ultimas perguntas registradas...
+      seach_message: Ultimas questões para o termo "%{term}"
+      filter_message: Perguntas em %{subject}
+      login_alert: Faça o login para continuar respondendo
+
+    placeholder:
+      search: Termo
+
+    button:
+      send: Enviar
+      search: Procurar
+
+    dropdown:
+      profile: Perfil
+      logout: Sair
+    
+    menu:
+      sign_in: Entrar
+      sign_up: Registra-se
+    
