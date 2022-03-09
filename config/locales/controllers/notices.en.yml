@@ -1,0 +1,6 @@
+en:
+  notice:
+    admin_backoffice:
+        create: '%{entity} Successfully Created'
+        update: '%{entidy} Successfully Updated'
+        delete: '%{entity} Successfully Deleted'

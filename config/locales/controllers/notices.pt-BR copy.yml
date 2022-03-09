@@ -1,0 +1,6 @@
+'pt-BR':
+  notice:
+    admin_backoffice:
+        create: '%{entity} criad%{gender} com sucesso '
+        update: '%{entity} atualizad%{gender} com sucesso'
+        delete: '%{entity} apagad%{gender} com sucesso'

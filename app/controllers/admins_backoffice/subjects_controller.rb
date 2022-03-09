@@ -13,7 +13,8 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
     @subject = Subject.new(subject_params)
 
     if @subject.save
-      redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Created'
+      redirect_to admins_backoffice_subjects_path,
+                  notice: t('notice.admin_backoffice.create', entity: t('activerecord.models.subject.one'), gender: 'o')
     else
       render :new
     end
@@ -23,7 +24,8 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def update
     if @subject.update(subject_params)
-      redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Updated'
+      redirect_to admins_backoffice_subjects_path,
+                  notice: t('notice.admin_backoffice.update', entity: t('activerecord.models.subject.one'), gender: 'o')
     else
       render :edit
     end
@@ -31,7 +33,8 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def destroy
     if @subject.destroy
-      redirect_to admins_backoffice_subjects_path, notice: 'Subject Successfully Deleted'
+      redirect_to admins_backoffice_subjects_path,
+                  notice: t('notice.admin_backoffice.delete', entity: t('activerecord.models.subject.one'), gender: 'o')
     else
       render :index
     end

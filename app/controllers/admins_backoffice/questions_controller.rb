@@ -14,7 +14,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
     @question = Question.new(question_params)
 
     if @question.save
-      redirect_to admins_backoffice_questions_path, notice: 'Question Successfully Created'
+      redirect_to admins_backoffice_questions_path,
+                  notice: t('notice.admin_backoffice.create', entity: t('activerecord.models.question.one'),
+                                                              gender: 'a')
     else
       render :new
     end
@@ -24,7 +26,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
   def update
     if @question.update(question_params)
-      redirect_to admins_backoffice_questions_path, notice: 'Question Successfully Created'
+      redirect_to admins_backoffice_questions_path,
+                  notice: t('notice.admin_backoffice.update', entity: t('activerecord.models.question.one'),
+                                                              gender: 'a')
     else
       render :edit
     end
@@ -32,7 +36,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
   def destroy
     if @question.destroy
-      redirect_to admins_backoffice_questions_path, notice: 'Question Successfully Deleted'
+      redirect_to admins_backoffice_questions_path,
+                  notice: t('notice.admin_backoffice.delete', entity: t('activerecord.models.question.one'),
+                                                              gender: 'a')
     else
       render :index
     end
