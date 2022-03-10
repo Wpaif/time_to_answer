@@ -20,6 +20,7 @@ gem 'devise'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem 'prawn-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'tty-spinner'
 
