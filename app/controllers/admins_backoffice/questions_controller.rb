@@ -3,7 +3,10 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   before_action :search_all_subjects, only: %i[edit new]
 
   def index
-    @questions = Question.includes(:subject).page(params[:page])
+    respond_to do |format|
+      format.html { @questions = Question.includes(:subject).page(params[:page]) }
+      format.pdf { @questions = Question.includes(:subject) }
+    end
   end
 
   def new
