@@ -1,11 +1,11 @@
 prawn_document do |pdf|
-  pdf.text_box 'Listando Perguntas', size: 24, style: :bold, align: :center
+  pdf.text_box 'Listando Assuntos', size: 24, style: :bold, align: :center
   pdf.move_down 45
 
-  header = %w[ID Descrição Assunto]
-  questions = @questions.map { |d| [d.id, d.description, d.subject.description] }
+  header = %w[ID Email]
+  admins = @admins.map { |a| [a.id, a.email] }
 
-  pdf.table(questions.unshift(header), position: :center, header: true, row_colors: %w[ffffff eaeaea], width: 500) do
+  pdf.table(admins.unshift(header), position: :center, header: true, row_colors: %w[ffffff eaeaea], width: 500) do
     style(row(0), background_color: '333333',
                   align: :center,
                   text_color: 'FFFFFF',

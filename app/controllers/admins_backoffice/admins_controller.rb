@@ -3,7 +3,10 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   before_action :check_password, only: %i[update]
 
   def index
-    @admins = Admin.all.page(params[:page])
+    respond_to do |format|
+      format.html { @admins = Admin.all.page(params[:page]) }
+      format.pdf { @admins = Admin.all }
+    end
   end
 
   def new
