@@ -6,6 +6,7 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
     respond_to do |format|
       format.html { @questions = Question.includes(:subject).page(params[:page]) }
       format.pdf { @questions = Question.includes(:subject) }
+      format.json { @questions = Question.includes(:subject, :answers) }
     end
   end
 
