@@ -6,6 +6,7 @@ ruby '2.7.5'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0'
+gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails', '~> 4.2'
@@ -26,7 +27,6 @@ gem 'tty-spinner'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3'
 end
 
 group :development do
@@ -44,10 +44,6 @@ group :test do
   gem 'selenium-webdriver'
 
   gem 'chromedriver-helper'
-end
-
-group :production do 
-  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
