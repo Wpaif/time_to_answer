@@ -26,7 +26,7 @@ gem 'tty-spinner'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-# gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :development do
