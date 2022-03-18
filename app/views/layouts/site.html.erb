@@ -52,13 +52,13 @@
                   <ul class="dropdown-menu">
                     <li>
                       <%= link_to users_backoffice_welcome_index_path do %>
-                        <i class="fa fa-user fa-fw"></i> Profile
+                        <i class="fa fa-user fa-fw"></i> <%= t('layout.dropdown.profile') %>
                       <% end %>
                     </li>
                     <li role="separator" class="divider"></li>
                     <li>
                       <%= link_to destroy_user_session_path, method: :delete do %>
-                      <i class="fa fa-sign-out fa-fw"></i> Logout
+                      <i class="fa fa-sign-out fa-fw"></i> <%= t('layout.dropdown.logout') %>
                       <% end %>
                     </li>
                   </ul>

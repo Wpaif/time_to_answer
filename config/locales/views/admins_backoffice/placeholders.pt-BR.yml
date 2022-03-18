@@ -14,4 +14,7 @@
     subject:
       subject_description: Descrição do assunto/área
       type_a_new_subject: Digite aqui o assunto
+    
+    answer:
+      type_a_new_answer: Digite aqui a resposta
 

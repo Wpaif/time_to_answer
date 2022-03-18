@@ -1,9 +1,9 @@
 'pt-BR':
-  interaction: 
+  interactions: 
     button:
       save: Salvar
       submit: Enviar
-      add_subject: Adicionar Assunto
+      add_answer: Adicionar resposta
     link:
       remove: Remover
     message:

@@ -10,7 +10,9 @@ en:
     question:
       question_description: Question description
       type_a_new_question: Type here a new question
+      type_a_new_subject: Type a new subject
+
 
     subject:
     subject_description: Subject/Question description
-    type_a_new_subject: Type a new subject
+    type_a_new_answer: Type a new answer
