@@ -1,24 +1,63 @@
-# README
+# Time To Answer
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Wpaif/time_to_answer/blob/main/LICENSE) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# About this project
+An application that consists of a platform for solving questions with generic subjects, where, like administrators, it can be managed from the administrative panel.
 
-Things you may want to cover:
+# Objective
+Application developed with the objective of learning the basic concepts of the Ruby on Rails framework, as well as the Model-View-Controller(MVC) pattern used
 
-* Ruby version
 
-* System dependencies
+# Technologies Used
+<table>
+  <tr>
+    <td>Ruby version</td>
+    <td>
+      2.7.5
+    </td>
+  </tr>
+  <tr>
+    <td>Rails version</td>
+    <td>
+      5.3
+    </td>
+  </tr>
+  <tr>
+    <td>Node version</td>
+    <td>
+      16.13.2
+    </td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>
+      SQLite3
+    </td>
+  </tr>
+</table>
 
-* Configuration
+# Running Locally
 
-* Database creation
+## Clone the repository and enter the folder
+```zsh
+git clone https://github.com/Wpaif/time_to_answer.git
+cd time_to_answer
+```
 
-* Database initialization
+## Install Node and Ruby On Rails dependencies respectively
+```
+yarn install
+bundle install
+```
 
-* How to run the test suite
+## Run the project
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails db:cretate
+rails db:migrate
+rails server
+```
+Open the browser at the address `http://localhost:3000`
 
-* Deployment instructions
-
-* ...
+# Author
+Wilian Ferreira
