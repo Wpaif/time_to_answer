@@ -2,8 +2,8 @@ en:
   activerecord:
     models:
       admin:
-        one: Administrador
-        other: Administradores
+        one: Administrator
+        other: Administrators
       user:
         one: User
         other: Users

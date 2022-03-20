@@ -1,0 +1,6 @@
+en:
+  pdf:
+    message: 'Listando %{term}'
+    id: ID
+    description: Description
+    subject: Subject

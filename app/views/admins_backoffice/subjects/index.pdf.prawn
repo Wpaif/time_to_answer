@@ -2,7 +2,7 @@ prawn_document do |pdf|
   pdf.text_box 'Listando Assuntos', size: 24, style: :bold, align: :center
   pdf.move_down 45
 
-  header = %w[ID Descrição]
+  header = %w[id description].map { |s| I18n.t("pdf.#{s}") }
   subjects = @subjects.map { |s| [s.id, s.description] }
 
   pdf.table(subjects.unshift(header), position: :center, header: true, row_colors: %w[ffffff eaeaea], width: 500) do

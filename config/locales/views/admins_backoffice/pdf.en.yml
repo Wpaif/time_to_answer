@@ -1,0 +1,6 @@
+en:
+  pdf:
+    message: 'Listing %{term}'
+    id: ID
+    description: Description
+    subjetc: Subject
